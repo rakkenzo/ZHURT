@@ -1,0 +1,16 @@
+project_id = "zhurt"
+
+[api]
+schemas = ["public"]
+
+[auth]
+site_url = "https://zhurt.kz"
+enable_signup = true
+
+[auth.sms]
+enable_signup = true
+enable_confirmations = true
+# Провайдер SMS (Twilio / MessageBird / Vonage / Textlocal) настраивается в панели Supabase → Auth → Providers → Phone.
+
+[functions.kinship]
+verify_jwt = true
