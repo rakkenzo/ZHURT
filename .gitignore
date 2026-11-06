@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.env*.local
+local.properties
+.gradle/
+build/
+.idea/
+*.iml
+.DS_Store
