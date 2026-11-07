@@ -153,7 +153,7 @@ fun DemoApp() {
         if (ok && noteUri != null) push(Kind.NOTE, "Видеозаметка", noteUri)
     }
     val askCamera = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-        if (granted && noteUri != null) captureNote.launch(noteUri)
+                if (granted) noteUri?.let { captureNote.launch(it) }
     }
 
     if (open == null) {
